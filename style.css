@@ -1,0 +1,144 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-image: url("/image.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh;
+  padding: 2rem;
+}
+
+/* Main Container */
+.app {
+  background: burlywood;
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 480px;
+}
+
+/* Header */
+.app h1 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  font-size: 2rem;
+  color: #4a4a4a;
+}
+
+/* Input + Button */
+#taskInput {
+  width: 70%;
+  padding: 0.75rem;
+  border: 1px solid #131212;
+  border-radius: 10px;
+  font-size: 1.2rem;
+  outline: none;
+  flex: 1;
+}
+
+.input-group {
+    display: flex;
+    gap: 0.5rem;
+}
+
+#addBtn {
+  width: 28%;
+  padding: 0.75rem;
+  border: none;
+  border-radius: 8px;
+  background-color: limegreen;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  margin-left: 2%;
+  font-size: larger;
+}
+
+#addBtn:hover {
+  background-color: #454fdd;
+}
+
+/* Filters */
+#filters {
+  display: flex;
+  justify-content: space-between;
+  margin: 1rem 0;
+}
+
+#filters button {
+  flex: 1;
+  margin: 0 0.2rem;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  background-color: #fafafa;
+  cursor: pointer;
+  border-radius: 6px;
+  transition: 0.3s;
+  font-size: medium;
+  font-weight: bold;
+}
+
+#filters button:hover {
+  background-color: #e0e0e0;
+}
+
+/* Task List */
+#taskList {
+  list-style-type: none;
+  margin-top: 1rem;
+}
+
+#taskList li {
+  background-color: #f9f9f9;
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+  margin-bottom: 0.7rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: 0.3s;
+}
+
+#taskList li:hover {
+  background-color: #f1f1f1;
+}
+
+/* Task Text */
+#taskList li span {
+  flex: 1;
+  font-size: 1.2rem;
+  font-weight: 600;
+  font-style: italic;
+}
+
+#taskList li span.done {
+  text-decoration: line-through;
+  color: #999;
+}
+
+/* Task Buttons */
+#taskList li button {
+  margin-left: 0.5rem;
+  border: none;
+  background: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+#taskList li button:hover {
+  color: #ff5050;
+}
