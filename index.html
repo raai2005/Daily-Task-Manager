@@ -10,8 +10,10 @@
 <body>
   <div class="app">
     <h1>📝 Daily Task Manager</h1>
+    
     <div class="input-group">
     <input type="text" id="taskInput" placeholder="Add a new task...">
+    <input type="date" id="dateInput">
     <button id="addBtn">Add Task</button>
     </div>
 
@@ -20,6 +22,17 @@
       <button data-filter="pending">Pending</button>
       <button data-filter="completed">Completed</button>
     </div>
+
+    <div class="date-filter">
+      <label for="dueDateFilter">Sort by Date:</label>
+      <select id="dueDateFilter">
+        <option value="all">All</option>
+        <option value="today">Due Today</option>
+        <option value="week">This Week</option>
+        <option value="overdue">Overdue</option>
+      </select>
+    </div>
+
 
     <ul id="taskList"></ul>
   </div>
