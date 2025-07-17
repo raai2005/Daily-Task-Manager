@@ -1,0 +1,17 @@
+# Ignore environment variables (Firebase config)
+.env
+
+# Ignore node_modules (installed via npm)
+node_modules/
+
+# Logs
+npm-debug.log*
+
+# MacOS system file
+.DS_Store
+
+# Windows system file
+Thumbs.db
+
+# VS Code settings (optional)
+.vscode/
