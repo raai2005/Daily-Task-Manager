@@ -13,9 +13,17 @@
     <h1>📝 Daily Task Manager</h1>
     
     <div class="input-group">
-    <input type="text" id="taskInput" placeholder="Add a new task...">
-    <input type="date" id="dueDateInput">
-    <button id="addBtn">Add Task</button>
+      <div class="input-field">
+        <label for="taskInput">Add a new Task:</label>
+        <input type="text" id="taskInput" placeholder="Enter a new task..." />
+      </div>
+
+      <div class="input-field">
+        <label for="dueDateInput">Due Date for the Task:</label>
+        <input type="date" id="dueDateInput" />
+      </div>
+
+      <button id="addBtn">Add Task</button>
     </div>
 
     <div id="filters">
