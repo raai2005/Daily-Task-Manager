@@ -77,7 +77,7 @@ body {
   cursor: pointer;
   transition: background 0.3s ease;
   font-size: 1.2rem;
-  min-width: 415px;
+  width: 100%;
 }
 
 #addBtn:hover {
@@ -168,9 +168,11 @@ body {
   }
 
   .input-group {
-    flex-direction: row;
+    flex-direction: column;
+    gap: 0.75rem;
   }
 
+  #dueDateInput,
   #taskInput,
   #addBtn {
     width: 100%;
@@ -178,12 +180,14 @@ body {
 
   #filters {
     flex-direction: column;
+    gap: 0.5rem;
   }
 
   #filters button {
     width: 100%;
   }
 }
+
 .date-filter {
   margin: 1rem 0;
   display: flex;
