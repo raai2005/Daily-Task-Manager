@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login - Daily Task Manager</title>
+  <link rel="stylesheet" href="login.css">
+  <link rel="icon" type="image/png" href="/assets/favicon-32x32.png">
+</head>
+<body>
+  <div class="container">
+    <h2>Welcome Back</h2>
+    <form id="loginForm">
+      <div class="input-group">
+        <input type="email" id="email" placeholder="Email Address" autocomplete="email" required />
+      </div>
+      
+      <div class="input-group">
+        <input type="password" id="password" placeholder="Password" autocomplete="current-password" required />
+      </div>
+      
+      <button type="submit" id="loginBtn">Sign In</button>
+    </form>
+    
+    <div class="register-link">
+      Don't have an account? <a href="/register">Create Account</a>
+    </div>
+  </div>
+
+  <!-- Include login logic -->
+  <script type="module" src="./login.js"></script>
+</body>
+</html> 
