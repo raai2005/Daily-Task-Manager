@@ -70,7 +70,7 @@ const authenticateToken = (req, res, next) => {
 
 // Routes
 app.get('/', (req, res) => {
-  res.sendFile(path.join(__dirname, 'pages', 'register', 'register.html'));
+  res.sendFile(path.join(__dirname, 'pages', 'index.html'));
 });
 
 app.get('/dashboard', (req, res) => {

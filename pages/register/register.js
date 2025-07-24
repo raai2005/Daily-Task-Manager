@@ -1,5 +1,23 @@
 // Registration page functionality
 import { registerUser } from '../../firebase/firebase.js';
+import { getAuth, onAuthStateChanged } from 'https://www.gstatic.com/firebasejs/10.12.2/firebase-auth.js';
+import { initializeApp } from 'https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js';
+// Firebase config (same as in firebase/firebase.js)
+const firebaseConfig = {
+  apiKey: "AIzaSyCc38FFnM7Xc7xFOoffrnEsQ3DJexchl8s",
+  authDomain: "daily-task-manager-24d82.firebaseapp.com",
+  projectId: "daily-task-manager-24d82",
+  storageBucket: "daily-task-manager-24d82.appspot.com",
+  messagingSenderId: "399990159546",
+  appId: "1:399990159546:web:918bc96a0c138279906a83"
+};
+const app = initializeApp(firebaseConfig);
+const auth = getAuth(app);
+onAuthStateChanged(auth, (user) => {
+  if (user) {
+    window.location.href = "/dashboard";
+  }
+});
 
 document.addEventListener('DOMContentLoaded', () => {
   const registerForm = document.getElementById('registerForm');

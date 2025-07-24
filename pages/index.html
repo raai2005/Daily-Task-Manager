@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Welcome | Daily Task Manager</title>
+  <link rel="icon" type="image/png" href="/assets/favicon-32x32.png">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      min-height: 100vh;
+      background: linear-gradient(120deg, #f8fafc 0%, #e0e7ff 100%);
+      font-family: 'Segoe UI', Arial, sans-serif;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .landing-container {
+      background: #fff;
+      border-radius: 18px;
+      box-shadow: 0 8px 32px rgba(60, 72, 100, 0.15);
+      padding: 3rem 2.5rem;
+      max-width: 400px;
+      text-align: center;
+    }
+    .landing-container h1 {
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+      color: #4f46e5;
+    }
+    .landing-container p {
+      color: #555;
+      margin-bottom: 2rem;
+      font-size: 1.1rem;
+    }
+    .cta-btns {
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+    }
+    .cta-btns a {
+      text-decoration: none;
+      padding: 0.75rem 1.5rem;
+      border-radius: 8px;
+      font-weight: 600;
+      font-size: 1rem;
+      transition: background 0.2s, color 0.2s;
+    }
+    .cta-btns .login {
+      background: #4f46e5;
+      color: #fff;
+    }
+    .cta-btns .login:hover {
+      background: #3730a3;
+    }
+    .cta-btns .register {
+      background: #e0e7ff;
+      color: #4f46e5;
+    }
+    .cta-btns .register:hover {
+      background: #c7d2fe;
+    }
+    @media (max-width: 500px) {
+      .landing-container {
+        padding: 2rem 1rem;
+      }
+      .landing-container h1 {
+        font-size: 2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="landing-container">
+    <h1>📝 Daily Task Manager</h1>
+    <p>Organize your day, boost your productivity, and never miss a task. <br> Secure, simple, and always with you.</p>
+    <div class="cta-btns">
+      <a href="/pages/login/login.html" class="login">Login</a>
+      <a href="/pages/register/register.html" class="register">Register</a>
+    </div>
+  </div>
+  <script type="module">
+    import { getAuth, onAuthStateChanged } from 'https://www.gstatic.com/firebasejs/10.12.2/firebase-auth.js';
+    import { initializeApp } from 'https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js';
+    // Firebase config (same as in firebase/firebase.js)
+    const firebaseConfig = {
+      apiKey: "AIzaSyCc38FFnM7Xc7xFOoffrnEsQ3DJexchl8s",
+      authDomain: "daily-task-manager-24d82.firebaseapp.com",
+      projectId: "daily-task-manager-24d82",
+      storageBucket: "daily-task-manager-24d82.appspot.com",
+      messagingSenderId: "399990159546",
+      appId: "1:399990159546:web:918bc96a0c138279906a83"
+    };
+    const app = initializeApp(firebaseConfig);
+    const auth = getAuth(app);
+    onAuthStateChanged(auth, (user) => {
+      if (user) {
+        window.location.href = "/dashboard";
+      }
+    });
+  </script>
+</body>
+</html> 
